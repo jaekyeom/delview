@@ -6,6 +6,7 @@ function! MyDeleteView()
 	let path = substitute(path, '/', '=+', 'g') . '='
 	" view directory
 	let path = &viewdir.'/'.path
+  bdelete
 	call delete(path)
 	echo "Deleted: ".path
 endfunction
