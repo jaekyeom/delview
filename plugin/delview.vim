@@ -10,6 +10,6 @@ function! MyDeleteView()
 	call delete(path)
 	echo "Deleted: ".path
 endfunction
-command Delview call MyDeleteView()
+command! Delview call MyDeleteView()
 " Lower-case user commands: http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
 cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delview')<CR>
